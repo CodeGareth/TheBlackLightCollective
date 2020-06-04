@@ -1,0 +1,125 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
+    <title>The Black Light Collective</title>
+  </head>
+  <body>
+
+
+    <div class="jumbotron jumbotron-fluid" style="background: url(https://www.nasa.gov/specials/blackmarble/2012/globalmaps/BlackMarble_2012_01deg.jpg) no-repeat center center fixed; -webkit-background-size: cover; -moz-background-size: cover; -o-background-size: cover; background-size: cover;">
+        <div class="container">
+          <h1 class="display-4 text-light">The Black Light Collective</h1>
+          <p class="lead text-light">Project Details</p>
+        </div>
+      </div>
+
+      <div class="container">
+        <div class="row">
+          <div class="col">
+            <div class="container" style="width: 90;">
+                <h1> Summary </h1>
+                <p> The most creative way to show our planet changing. </p>
+            </div>
+          </div>
+        </div>
+        <hr>
+        <div class="row">
+            <div class="col">
+              <div class="container" style="width: 90;">
+                  <h1> How We Addressed This Challenge </h1>
+                  <p> Using Space Data, as well as additional freely available information, we document environmental changes caused by Covid19 and the associated societal responses.
+                    We help to shine a light, and tell the stories of different cities and how they have reacted during this unprecedented time.</p>
+
+                   <p>With the decrease in NO2 highlighting a drop in traffic and industry, we see the greener alternatives holding true. We can see that bike 7753 has not been forgotten about during this period of time!</p> 
+                    
+                   <p>Our goal was not to show "this is exactly what's happening", rather, it was to help open the data up and tell a story in such a way to help bring others along with us. In the areas where it seems the world is standing still, life is still happening, and there's still activity to be measured.  </p>
+              </div>
+            </div>
+          </div>
+          <hr>
+          <div class="row">
+            <div class="col">
+              <div class="container" style="width: 90;">
+                  <h1> How We Developed This Project </h1>
+                  <div><p>The Black Light Collective wanted to find how data could help explore the impacts that the Covid-19 pandemic has on our environment.</p>
+                    <p>We've combined many different data sources in a creative way with the aim of letting everybody appreciate the power of data.&nbsp;</p>
+                    <p>We use space agency data as a backdrop to our travel in Europe. In particular we use <em>NASA</em> <em>Worldview</em> comparison tool to show Europe switching off during the lockdown and NASA image on the <em>Google Earth by Night</em> layer in our Video "Sounds of Europe".</p>
+                    <p>We create other interactive visualizations using other data sources to help better tell the story of the cities. Below, you can find details regarding each aspect of our project:&nbsp;</p>
+                    <p><u>London Bike</u></p>
+                    <p>Having discovered the amazing open cycling data provided by Transport for London (https://cycling.data.tfl.gov.uk/) &nbsp;we went about trying to gain insight into the data. The data was labelled, it was just a matter of combining the individual sources to form a complete time series of the coronavirus period to date.&nbsp;</p>
+                    <p>We used Python and the Pandas module specifically to help combine each of the csv files together. Using Requests, we benefited from the free api by OpenCage Geocoder to assign each bike station its own map coordinates - filtering specifically for all those in London to help keep the map tidy.&nbsp;</p>
+                    <p>We filtered the cycling data to one individual bike to help keep the map format clean and presentable. We used Folium to help both plot the individual locations, but create an additional interactive map which plots each journey that the bike went on from January to May.</p>
+                    <p></p>
+                    <p><u>Sky in Milan</u></p>
+                    <p>We &nbsp;could also explore the sky thanks to opensky-network.org, for the list of flight, &nbsp;and openflights.org, for the details of airports. Using Python, we integrated these different data sources to find the geolocated list of flight and, once we had the list, we could visualize all the flights to and from Milan on March 2020. We can clearly see the number of flights drops due to government decrees.</p>
+                    <p><a href="https://kepler.gl/demo/map?mapUrl=https://dl.dropboxusercontent.com/s/m8i6x2d7wugr5ti/keplergl_qn9s2z.json">https://kepler.gl/demo/map?mapUrl=https://dl.dropboxusercontent.com/s/m8i6x2d7wugr5ti/keplergl_qn9s2z.json</a></p>
+                    <p><u>Sounds of Europe</u></p>
+                    <p>Thanks to Google, who make Mobility Trend data open at <a href="https://www.google.com/covid19/mobility/"><u>www.google.com/covid19/mobility</u></a><u>, </u>&nbsp;we could explore human change in habits all over the world. &nbsp;We approach these data in two different ways:</p>
+                    <ul>
+                      <li>&nbsp;We made a Tableau Dashboard representing Google trends for Residential, Park,&nbsp;Workplace and Grocery. On that Dashboard you can visualize the changes in behavior that every country went through. The single point moving through the graph became then an artistic film about London&amp;Milan trends. <a href="https://public.tableau.com/profile/data.science1261#!/vizhome/GoogleMobilityTrends_15899178649300/Dashboard1">https://public.tableau.com/profile/data.science1261#!/vizhome/GoogleMobilityTrends_15899178649300/Dashboard1</a></li>
+                      <li>&nbsp;Following the great talk by Gabriel Levine in 2016 (https://www.youtube.com/watch?v=vb9c_WFMYeI&amp;t=233s&amp;app=desktop) we went about bringing his old Python project back to life. Once fully understood, we set up our own system where rather than creating music from weather, we created music from mobility trend data.&nbsp;<a href="https://blacklightcollective.pythonanywhere.com/">https://blacklightcollective.pythonanywhere.com/</a></li>
+                    </ul>
+                    <p>This combination of two approaches let us create the movie "Sounds of Europe" where we can hear and see our habits change.We hope you enjoy.&nbsp;</p>
+                    <p><a href="https://drive.google.com/file/d/1nJiq1bGKriKRRd86nS9h_VAIJxMsS5Z2/view">https://drive.google.com/file/d/1nJiq1bGKriKRRd86nS9h_VAIJxMsS5Z2/view</a></p></div>
+              </div>
+            </div>>
+          </div>
+        <hr>
+          <div class="row">
+            <div class="col">
+              <div class="container" style="width: 90;">
+                  <h1> Project Demo </h1>
+                  <p><a href = "https://docs.google.com/presentation/d/e/2PACX-1vRR-iyi6fFP0m8Rw7M3WdO005w7_PNO1BT7hvneUGqoVm-MEOq40kEP2RbmrjAH5SJCcdelJmm8CeHD/pub?start=false&loop=false&delayms=3000"> Google Presentation Deck </a></p>
+              </div>
+            </div>
+          </div>
+        <hr>
+          <div class="row">
+            <div class="col">
+              <div class="container" style="width: 90;">
+                  <h1> Project Code </h1>
+                  <p><a href = "https://github.com/CodeGareth/TheBlackLightCollective">GitHub</a></p>
+              </div>
+            </div>
+          </div>
+        <hr>
+          <div class="row">
+            <div class="col">
+              <div class="container" style="width: 90;">
+                  <h1> Data & Resources </h1>
+                  <div><p><strong>Google Mobility Trend</strong>:<a href="https://www.google.com/covid19/mobility/"> <u>https://www.google.com/covid19/mobility/</u></a></p>
+                    <p><strong>EOSDIS Worldview:</strong><a href="https://worldview.earthdata.nasa.gov/"><strong> </strong><u>https://worldview.earthdata.nasa.gov/</u></a></p>
+                    <p><strong>Google earth by night:</strong><a href="https://earth.google.com/"> <u>https://earth.google.com/</u></a></p>
+                    <p><strong>Flight</strong>:<a href="https://opensky-network.org/"> <u>https://opensky-network.org/</u></a>,<a href="https://openflights.org/data.html"> <u>https://openflights.org/data.html</u></a></p>
+                    <p><strong>Bike: </strong><a href="https://cycling.data.tfl.gov.uk/"><u>https://cycling.data.tfl.gov.uk/</u></a></p>
+                    <p><strong>Pollution:</strong><a href="https://apps.sentinel-hub.com/"><strong> </strong><u>https://apps.sentinel-hub.com/</u></a></p>
+                    <p><strong>Music: &nbsp;</strong><a href="https://www.youtube.com/watch?v=vb9c_WFMYeI&amp;t=233s&amp;app=desktop"><u>https://www.youtube.com/watch?v=vb9c_WFMYeI&amp;t=233s&amp;app=desktop</u></a><u>, <a href = "https://www.ableton.com/en/">https://www.ableton.com/en/"</a></u></p>
+                    <p><strong>Sound: </strong><u>https://www.nasa.gov/connect/sounds/index.html</u></p></div>
+              </div>
+            </div>
+          </div>
+        <hr>
+          <div class="row">
+            <div class="col">
+              <div class="container" style="width: 90;">
+                  <h1> Tags </h1>
+                  <div>#NASA #SpaceApps #google  #europe #music #Milan #London #Bucharest #bike #flight #pollution #python #tableau #kepler #adobe #abelton</div>
+              </div>
+            </div>
+          </div>
+      </div>
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+  </body>
+</html>
